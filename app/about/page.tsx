@@ -12,7 +12,7 @@ interface AnimatedNumbersProps {
 }
 
 const AnimatedNumbers: React.FC<AnimatedNumbersProps> = ({ value }) => {
-  const ref = useRef(null);
+  const ref = useRef<HTMLSpanElement>(null);
 
   const motionValue = useMotionValue(0);
   const springValue = useSpring(motionValue, { duration: 3000 });
