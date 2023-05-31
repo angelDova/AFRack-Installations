@@ -11,11 +11,11 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 
 export default function Home() {
   return (
-    <main className="flex items-center text-black w-full min-h-screen cursor-default">
+    <main className="flex items-center text-black w-full min-h-screen cursor-default dark:text-white">
       {/* <Hero /> */}
       {/* <Footer /> */}
       <Layout className="pt-0">
-        <div className="flex items-center justify-evenly w-full">
+        <div className="flex items-center justify-between w-full">
           <div className="">
             <Image
               src="/logo.jpg"

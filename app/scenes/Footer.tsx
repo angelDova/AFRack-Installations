@@ -114,13 +114,13 @@ const Footer = () => {
         <div className="flex items-center">
           Built by&nbsp;
           <Link
-            className="underline underline-offset-2"
+            className="hover:underline underline-offset-2"
             href="/https://github.com/angelDova"
           >
             angelDova
           </Link>
         </div>
-        <Link className="underline underline-offset-2" href="/contact">
+        <Link className="hover:underline underline-offset-2" href="/contact">
           Contact
         </Link>
       </Layout>

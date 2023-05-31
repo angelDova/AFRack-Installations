@@ -1,6 +1,7 @@
 "use client";
 
 import AnimatedText from "@/components/AnimatedText";
+import Experience from "@/components/Experience";
 import Layout from "@/components/Layout";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
 import Head from "next/head";
@@ -111,6 +112,8 @@ const page = () => {
               </div>
             </div>
           </div>
+
+          <Experience />
         </Layout>
       </main>
     </>

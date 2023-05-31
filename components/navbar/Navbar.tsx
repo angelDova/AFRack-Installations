@@ -81,8 +81,12 @@ import {
   FaLinkedin,
   FaYoutube,
   FaGithub,
+  FaSun,
+  FaMoon,
 } from "react-icons/fa";
+
 import { motion } from "framer-motion";
+import useThemeSwitcher from "../hooks/useThemeSwitcher";
 
 interface CustomLinkProps {
   href: string;
@@ -102,7 +106,7 @@ const CustomLink: React.FC<CustomLinkProps> = ({
       {title}
 
       <span
-        className={`h-[1px] inline-block w-0 bg-neutral-950 absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 ${""}`}
+        className={`h-[1px] inline-block w-0 bg-neutral-950 absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 ${""} dark:bg-white`}
       >
         &nbsp;
       </span>
@@ -111,14 +115,16 @@ const CustomLink: React.FC<CustomLinkProps> = ({
 };
 
 const Navbar = () => {
+  const [mode, setMode] = useThemeSwitcher();
+
   return (
     <>
-      <header className="cursor-auto w-full px-32 py-8 font-medium flex items-center justify-between">
+      <header className="cursor-auto w-full px-32 py-8 font-medium flex items-center justify-between dark:text-white">
         <nav>
           <CustomLink href="/" title="Home" className="mr-4" />
           <CustomLink href="/about" title="About" className="mx-4" />
           <CustomLink href="/services" title="Services" className="mx-4" />
-          <CustomLink href="/" title="Projects" className="mx-4" />
+          <CustomLink href="/projects" title="Projects" className="mx-4" />
           <CustomLink href="/contact" title="Contact" className="ml-4" />
         </nav>
         <nav className="flex items-center justify-between flex-wrap">
@@ -167,6 +173,21 @@ const Navbar = () => {
           >
             <FaGithub size={32} />
           </motion.a>
+
+          <button
+            className={`ml-8 flex items-center justify-center rounded-full p-1 ${
+              mode === "light"
+                ? "bg-black/90 text-white"
+                : "bg-white text-black"
+            }`}
+            onClick={() => setMode(mode === "dark" ? "light" : "dark")}
+          >
+            {mode === "dark" ? (
+              <FaSun className={"fill-dark"} size={28} />
+            ) : (
+              <FaMoon className={"fill-dark"} size={28} />
+            )}
+          </button>
         </nav>
 
         <div className="absolute left-[50%] top-2 translate-x-[-50%]">
