@@ -43,12 +43,12 @@ const page = () => {
         <title>AF Rack Installation | About Us</title>
         <meta name="description" content="AF Rack Installation" />
       </Head>
-      <main className="flex w-full flex-col items-center justify-center cursor-default">
+      <main className="flex w-full flex-col items-center justify-center cursor-default dark:text-white">
         <Layout className="pt-16">
           <AnimatedText className="mb-16" text="A Little About Us" />
           <div className="grid w-full grid-cols-8 gap-16">
             <div className="col-span-3 flex flex-col items-start justify-start">
-              <h2 className="mb-4 text-lg font-bold uppercase text-black/75">
+              <h2 className="mb-4 text-lg font-bold uppercase text-black/75 dark:text-white/75">
                 About Us
               </h2>
               <p className="font-medium">
@@ -72,14 +72,18 @@ const page = () => {
               </p>
             </div>
 
-            <div className="col-span-3 relative h-max rounded-2xl border-2 border-solid border-black bg-white p-8">
-              <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-black" />
+            <div className="col-span-3 relative h-max rounded-2xl border-2 border-solid border-black bg-white p-8 dark:bg-black/90 dark:border-white">
+              <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-black dark:bg-white" />
               <Image
                 src="/rack-animated.jpeg"
                 alt="AFRackInstallation"
                 className="w-full h-auto rounded-2xl"
                 height="100"
                 width="280"
+                priority
+                sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
               />
             </div>
 
@@ -88,7 +92,7 @@ const page = () => {
                 <span className="inline-block text-7xl font-bold">
                   <AnimatedNumbers value={50} />+
                 </span>
-                <h2 className="text-xl font-medium capitalize text-black/75">
+                <h2 className="text-xl font-medium capitalize text-black/75 dark:text-white/75">
                   Satisfied Clients
                 </h2>
               </div>
@@ -97,7 +101,7 @@ const page = () => {
                 <span className="inline-block text-7xl font-bold">
                   <AnimatedNumbers value={100} />+
                 </span>
-                <h2 className="text-xl font-medium capitalize text-black/75">
+                <h2 className="text-xl font-medium capitalize text-black/75 dark:text-white/75">
                   Projects Completed
                 </h2>
               </div>
@@ -106,7 +110,7 @@ const page = () => {
                 <span className="inline-block text-7xl font-bold">
                   <AnimatedNumbers value={25} />+
                 </span>
-                <h2 className="text-xl font-medium capitalize text-black/75">
+                <h2 className="text-xl font-medium capitalize text-black/75 dark:text-white/75">
                   Years of Experience
                 </h2>
               </div>

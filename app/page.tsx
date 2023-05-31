@@ -11,11 +11,11 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 
 export default function Home() {
   return (
-    <main className="flex items-center text-black w-full min-h-screen cursor-default dark:text-white">
+    <main className="flex items-center text-black w-full min-h-screen cursor-default dark:text-white dark:bg-black/10">
       {/* <Hero /> */}
       {/* <Footer /> */}
-      <Layout className="pt-0">
-        <div className="flex items-center justify-between w-full">
+      <Layout className="pt-0 dark:bg-black/0">
+        <div className="flex items-center justify-between w-full ">
           <div className="">
             <Image
               src="/logo.jpg"
@@ -23,6 +23,10 @@ export default function Home() {
               className="w-full h-auto cursor-pointer"
               height="100"
               width="260"
+              priority
+              sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              50vw"
             />
           </div>
           <div className="w-1/2 flex flex-col items-center self-center">
@@ -42,7 +46,7 @@ export default function Home() {
               <Link
                 href="/dummy.pdf"
                 target={"_blank"}
-                className="flex items-center bg-neutral-950 text-white p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-white hover:text-black border-2 border-solid border-transparent hover:border-black"
+                className="flex items-center bg-neutral-950 text-white p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-white hover:text-black border-2 border-solid border-transparent hover:border-black dark:bg-white dark:text-black hover:dark:bg-black hover:dark:text-white hover:dark:border-white"
                 download={true}
               >
                 Request a Quote <FaExternalLinkAlt className={"w-6 ml-1"} />
@@ -50,7 +54,7 @@ export default function Home() {
               <Link
                 href="mailto:angelfcb01@yahoo.com"
                 target={"_blank"}
-                className="ml-4 text-lg font-medium capitalize text-black underline"
+                className="ml-4 text-lg font-medium capitalize text-black underline dark:text-white"
               >
                 Contact
               </Link>

@@ -12,7 +12,7 @@ const LiIcon: React.FC<LiIconProps> = ({ reference }) => {
   });
 
   return (
-    <figure className="absolute left-0 stroke-black">
+    <figure className="absolute left-0 stroke-black dark:stroke-white">
       <svg className="-rotate-90" width="75" height="75" viewBox="0 0 100 100">
         <circle
           cx="75"
@@ -24,7 +24,7 @@ const LiIcon: React.FC<LiIconProps> = ({ reference }) => {
           cx="75"
           cy="50"
           r="20"
-          className=" stroke-[5px] fill-white"
+          className=" stroke-[5px] fill-white dark:fill-black"
           style={{ pathLength: scrollYProgress }}
         />
         <circle

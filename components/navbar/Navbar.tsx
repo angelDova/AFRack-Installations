@@ -119,7 +119,7 @@ const Navbar = () => {
 
   return (
     <>
-      <header className="cursor-auto w-full px-32 py-8 font-medium flex items-center justify-between dark:text-white">
+      <header className="cursor-auto w-full px-32 py-8 font-medium flex items-center justify-between dark:bg-black/10 dark:text-white">
         <nav>
           <CustomLink href="/" title="Home" className="mr-4" />
           <CustomLink href="/about" title="About" className="mx-4" />

@@ -10,14 +10,16 @@ const GetAQuote = () => {
         <Image
           src="/AFlogo-spin.png"
           alt="logo-spin"
-          className="fill-black animate-spin-slow"
+          className="fill-black animate-spin-slow dark:fill-white"
           height="100"
           width="180"
         />
 
         <Link
           href="mailto:angelfcb01@yahoo.com"
-          className="flex items-center justify-center absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-black text-white shadow-md border border-solid border-black w-20 h-20 rounded-full font-semibold hover:bg-white hover:text-black"
+          className="flex items-center justify-center absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-black text-white shadow-md border border-solid border-black w-20 h-20 rounded-full font-semibold hover:bg-white hover:text-black 
+          
+          dark:bg-white dark:text-black hover:dark:bg-black hover:dark:text-white hover:dark:border-white"
         >
           Hire Me
         </Link>

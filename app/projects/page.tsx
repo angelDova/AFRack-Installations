@@ -30,8 +30,8 @@ const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({
   github,
 }) => {
   return (
-    <article className="w-full flex items-center justify-between rounded-3xl border border-solid border-black bg-white shadow-2xl p-12 relative rounded-br-2xl">
-      <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-black rounded-br-3xl" />
+    <article className="w-full flex items-center justify-between rounded-3xl border border-solid border-black bg-white shadow-2xl p-12 relative rounded-br-2xl dark:bg-black/90 dark:border-white">
+      <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-black rounded-br-3xl dark:bg-white " />
       <Link
         className="w-1/2 cursor-pointer overflow-hidden rounded-lg"
         href={link}
@@ -45,15 +45,19 @@ const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({
         />
       </Link>
       <div className="w-1/2 flex flex-col items-start justify-between pl-6">
-        <span className="text-blue-700 font-medium text-xl">{type}</span>
+        <span className="text-blue-700 font-medium text-xl dark:text-blue-700">
+          {type}
+        </span>
         <Link
           href={link}
           target="_blank"
           className="hover:underline underline-offset-2"
         >
-          <h2 className="my-2 w-full text-left text-4xl font-bold ">{title}</h2>
+          <h2 className="my-2 w-full text-left text-4xl font-bold dark:text-white">
+            {title}
+          </h2>
         </Link>
-        <p className="my-2 font-medium text-black">{summary}</p>
+        <p className="my-2 font-medium text-black dark:text-white">{summary}</p>
         <div className="mt-2 flex items-center ">
           <Link href={github} target="_blank" className="w-12">
             <FaGithub size={46} />
@@ -61,7 +65,7 @@ const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({
           <Link
             href={link}
             target="_blank"
-            className="ml-4 rounded-lg bg-black text-white p-2 px-6 text-lg font-semibold"
+            className="ml-4 rounded-lg bg-black text-white p-2 px-6 text-lg font-semibold dark:bg-white dark:text-black"
           >
             Visit Project
           </Link>
@@ -87,8 +91,8 @@ const Project: React.FC<ProjectProps> = ({
   github,
 }) => {
   return (
-    <article className="w-full flex flex-col items-center justify-between rounded-2xl border border-solid border-black bg-white shadow-2xl p-6 relative">
-      <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] bg-black rounded-br-3xl" />
+    <article className="w-full flex flex-col items-center justify-between rounded-2xl border border-solid border-black bg-white shadow-2xl p-6 relative dark:bg-black/90 dark:border-white">
+      <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] bg-black rounded-br-3xl dark:bg-white" />
 
       <Link
         className="w-full cursor-pointer overflow-hidden rounded-lg"
@@ -100,6 +104,10 @@ const Project: React.FC<ProjectProps> = ({
           alt={title}
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.2 }}
+          priority
+          sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              50vw"
         />
       </Link>
       <div className="full flex flex-col items-start justify-between mt-4">
@@ -136,7 +144,7 @@ const projects = () => {
         <title>AF Rack Installation | Previous Projects</title>
         <meta name="description" content="AF Rack Installation" />
       </Head>
-      <main className="w-full mb-16 flex flex-col items-center justify-center cursor-default">
+      <main className="w-full mb-16 flex flex-col items-center justify-center cursor-default dark:text-white">
         <Layout className="pt-16">
           <AnimatedText text="Previous Projects Done" className="mb-16" />
 

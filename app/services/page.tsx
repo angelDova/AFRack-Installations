@@ -178,7 +178,7 @@ const Service: React.FC<ServiceProps> = ({ img, title, date, link }) => {
       initial={{ y: 200 }}
       whileInView={{ y: 0, transition: { duration: 0.5, ease: "easeInOut" } }}
       viewport={{ once: true }}
-      className="relative w-full p-4 py-6 my-4 rounded-xl flex items-center justify-between bg-white text-black first:mt-0 border border-solid border-black border-r-4 border-b-4"
+      className="relative w-full p-4 py-6 my-4 rounded-xl flex items-center justify-between bg-white text-black first:mt-0 border border-solid border-black border-r-4 border-b-4 dark:border-white dark:bg-black/10 dark:text-white"
     >
       <MovingImg title={title} img={img} link={link} />
       <span className="text-blue-700 font-semibold pl-4">{date}</span>
@@ -202,8 +202,8 @@ const FeaturedService: React.FC<FeaturedServiceProps> = ({
   link,
 }) => {
   return (
-    <li className="col-span-1 w-full p-4 bg-white border border-solid border-black rounded-2xl relative">
-      <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] bg-black rounded-br-3xl" />
+    <li className="col-span-1 w-full p-4 bg-white border border-solid border-black rounded-2xl relative dark:bg-black/10 dark:border-white">
+      <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] bg-black rounded-br-3xl dark:bg-black/10" />
       <Link
         className="w-full inline-block cursor-pointer overflow-hidden rounded-lg"
         href={link}
@@ -215,6 +215,10 @@ const FeaturedService: React.FC<FeaturedServiceProps> = ({
           className="h-full w-auto"
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.2 }}
+          priority
+          sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              50vw"
         />
       </Link>
       <Link href={link} target="_blank">
@@ -223,7 +227,9 @@ const FeaturedService: React.FC<FeaturedServiceProps> = ({
         </h2>
       </Link>
       <p className="text-sm mb-2 ">{summary}</p>
-      <span className="text-blue-700 font-semibold">{time}</span>
+      <span className="text-blue-700 font-semibold dark:text-blue-700">
+        {time}
+      </span>
     </li>
   );
 };
@@ -235,7 +241,7 @@ const services = () => {
         <title>AF Rack Installation | Services Offered</title>
         <meta name="description" content="AF Rack Installation" />
       </Head>
-      <main className="w-full mb-16 flex flex-col items-center justify-center overflow-hidden cursor-default">
+      <main className="w-full mb-16 flex flex-col items-center justify-center overflow-hidden cursor-default dark:text-white">
         <Layout className="pt-16">
           <AnimatedText text="Services Offered" className="mb-16" />
           <ul className="grid grid-cols-2 gap-16">
