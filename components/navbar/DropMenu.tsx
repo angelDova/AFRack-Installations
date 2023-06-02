@@ -42,7 +42,7 @@ export default function DropMenu({ drop, setDrop }: Bol) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="fixed bg-white top-5 right-5 left-5 rounded-3xl shadow-2xl shadow-slate-600 z-50 "
+      className="fixed bg-light top-5 right-5 left-5 rounded-3xl shadow-2xl shadow-slate-600 z-50 "
       onClick={() => setDrop(false)}
     >
       <nav className="flex flex-col">

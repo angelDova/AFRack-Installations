@@ -6,7 +6,7 @@ interface ButtonProps {
   label: string;
   onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
   disabled?: boolean;
-  black?: boolean;
+  dark?: boolean;
   small?: boolean;
   icon?: IconType;
   btnName?: string;
@@ -16,7 +16,7 @@ const Button: React.FC<ButtonProps> = ({
   label,
   onClick,
   disabled,
-  black,
+  dark,
   small,
   icon: Icon,
 }) => {
@@ -26,7 +26,7 @@ const Button: React.FC<ButtonProps> = ({
       onClick={onClick}
       className={`
       flex justify-between px-1 pl-4 items-center gap-4 py-[5px]  rounded-full
-      ${black ? "bg-black text-white" : "bg-gray-300"}
+      ${dark ? "bg-dark text-light" : "bg-gray-300"}
       `}
     >
       {label}

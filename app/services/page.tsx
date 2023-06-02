@@ -112,6 +112,7 @@ import service6 from "../../public/images/articles/Teardown.jpeg";
 import service7 from "../../public/images/articles/Selective.webp";
 import { motion, useMotionValue } from "framer-motion";
 import { useRef } from "react";
+import TransitionEffect from "@/components/TransitionEffect";
 
 const FramerImage = motion(Image);
 
@@ -158,7 +159,7 @@ const MovingImg: React.FC<MovingImgProps> = ({ title, img, link }) => {
           src={img}
           alt={title}
           ref={imgRef}
-          className="w-96 h-auto hidden absolute rounded-lg z-10"
+          className="w-96 h-auto hidden absolute rounded-lg z-10 md:!hidden"
         />
       </h2>
     </Link>
@@ -178,10 +179,12 @@ const Service: React.FC<ServiceProps> = ({ img, title, date, link }) => {
       initial={{ y: 200 }}
       whileInView={{ y: 0, transition: { duration: 0.5, ease: "easeInOut" } }}
       viewport={{ once: true }}
-      className="relative w-full p-4 py-6 my-4 rounded-xl flex items-center justify-between bg-white text-black first:mt-0 border border-solid border-black border-r-4 border-b-4 dark:border-white dark:bg-black/10 dark:text-white"
+      className="relative w-full p-4 py-6 my-4 rounded-xl flex items-center justify-between bg-light text-dark first:mt-0 border border-solid border-dark border-r-4 border-b-4 dark:border-light dark:bg-dark/10 dark:text-light sm:flex-col"
     >
       <MovingImg title={title} img={img} link={link} />
-      <span className="text-blue-700 font-semibold pl-4">{date}</span>
+      <span className="text-blue-700 font-semibold pl-4 sm:self-start sm:pl-0 xs:text-sm">
+        {date}
+      </span>
     </motion.li>
   );
 };
@@ -202,8 +205,8 @@ const FeaturedService: React.FC<FeaturedServiceProps> = ({
   link,
 }) => {
   return (
-    <li className="col-span-1 w-full p-4 bg-white border border-solid border-black rounded-2xl relative dark:bg-black/10 dark:border-white">
-      <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] bg-black rounded-br-3xl dark:bg-black/10" />
+    <li className="col-span-1 w-full p-4 bg-light border border-solid border-dark rounded-2xl relative dark:bg-dark/10 dark:border-light">
+      <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] bg-dark rounded-br-3xl dark:bg-dark/10" />
       <Link
         className="w-full inline-block cursor-pointer overflow-hidden rounded-lg"
         href={link}
@@ -222,7 +225,7 @@ const FeaturedService: React.FC<FeaturedServiceProps> = ({
         />
       </Link>
       <Link href={link} target="_blank">
-        <h2 className="capitalize text-2xl font-bold my-2 mt-4 hover:underline">
+        <h2 className="capitalize text-2xl font-bold my-2 mt-4 hover:underline xs:text-lg">
           {title}
         </h2>
       </Link>
@@ -239,12 +242,16 @@ const services = () => {
     <>
       <Head>
         <title>AF Rack Installation | Services Offered</title>
-        <meta name="description" content="AF Rack Installation" />
+        <meta name="Warehouse Racks" content="AF Rack Installation" />
       </Head>
-      <main className="w-full mb-16 flex flex-col items-center justify-center overflow-hidden cursor-default dark:text-white">
-        <Layout className="pt-16">
-          <AnimatedText text="Services Offered" className="mb-16" />
-          <ul className="grid grid-cols-2 gap-16">
+      <TransitionEffect />
+      <main className="w-full mb-16 flex flex-col items-center justify-center overflow-hidden cursor-default text-dark dark:text-light">
+        <Layout className="pt-16 xs:p-4">
+          <AnimatedText
+            text="Services Offered"
+            className="mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
+          />
+          <ul className="grid grid-cols-2 gap-16 lg:gap-6 md:grid-cols-1 md:gap-y-16">
             <FeaturedService
               title="Structural Racking"
               summary=" Learn how to build a custom pagination component in ReactJS from scratch. 

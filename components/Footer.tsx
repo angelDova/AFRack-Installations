@@ -108,10 +108,10 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="w-full border-t-2 border-solid border-black font-medium text-lg cursor-default dark:text-white dark:border-white">
-      <Layout className="py-8 flex items-center justify-between">
+    <footer className="w-full border-t-2 border-solid border-dark font-medium text-lg cursor-default text-dark dark:text-light dark:border-light sm:text-base">
+      <Layout className="py-8 flex items-center justify-between lg:flex-col lg:py-6 lg:text-center">
         <span>{new Date().getFullYear()} &copy; All Rights Reserved.</span>
-        <div className="flex items-center">
+        <div className="flex items-center lg:py-2">
           Built by&nbsp;
           <Link
             className="hover:underline underline-offset-2"

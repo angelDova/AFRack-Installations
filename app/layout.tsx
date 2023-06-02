@@ -1,14 +1,14 @@
-import Navbar from "@/components/navbar/Navbar";
+import Navbar from "@/components/Navbar";
 import "./globals.css";
 import { Inter } from "next/font/google";
-import ClientOnly from "@/providers/Client";
-import Footer from "./scenes/Footer";
+import Footer from "@/components/Footer";
 import Script from "next/script";
+import ClientOnly from "@/providers/Client";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "AF Rack Installations",
+  title: "AF Rack Installation",
   description: "Built by angelDova",
 };
 
@@ -30,9 +30,11 @@ export default function RootLayout({
 }
 `}</Script>
         <ClientOnly>
-          <main className="bg-white dark:bg-black/90 w-full min-h-screen">
+          <main className="bg-light dark:bg-dark w-full min-h-screen">
             <Navbar />
+
             {children}
+
             <Footer />
           </main>
         </ClientOnly>
