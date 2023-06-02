@@ -110,6 +110,8 @@ import service4 from "../../public/images/articles/Shelving.webp";
 import service5 from "../../public/images/articles/Push-Back.jpeg";
 import service6 from "../../public/images/articles/Teardown.jpeg";
 import service7 from "../../public/images/articles/Selective.webp";
+import service8 from "../../public/images/articles/Maintenance.jpeg";
+import service9 from "../../public/images/articles/rack-1.jpg";
 import { motion, useMotionValue } from "framer-motion";
 import { useRef } from "react";
 import TransitionEffect from "@/components/TransitionEffect";
@@ -258,7 +260,7 @@ const services = () => {
                 Follow this step-by-step guide to integrate Pagination component in your ReactJS project."
               time=" 9 min read"
               link="/"
-              img={service1}
+              img={service9}
             />
 
             <FeaturedService
@@ -305,8 +307,8 @@ const services = () => {
               link="/"
             />
             <Service
-              title="Form Validation In Reactjs: Build A Reusable Custom Hook For Inputs And Error Handling"
-              img={service5}
+              title="Maintenance"
+              img={service8}
               date="March 30, 2023"
               link="/"
             />

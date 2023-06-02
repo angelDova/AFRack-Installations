@@ -194,7 +194,7 @@ const Navbar = () => {
           </nav>
           <nav className="flex items-center justify-between flex-wrap">
             <motion.a
-              href="https://github.com/angelDova"
+              href="https://google.com"
               target={"_blank"}
               whileHover={{ y: -2 }}
               className="w-6 mr-6"
@@ -203,7 +203,7 @@ const Navbar = () => {
               <FaInstagram size={32} />
             </motion.a>
             <motion.a
-              href="https://github.com/angelDova"
+              href="https://google.com"
               target={"_blank"}
               whileHover={{ y: -2 }}
               className="w-6 mx-6"
@@ -212,7 +212,7 @@ const Navbar = () => {
               <FaTwitter size={32} />
             </motion.a>
             <motion.a
-              href="https://github.com/angelDova"
+              href="https://google.com"
               target={"_blank"}
               whileHover={{ y: -2 }}
               className="w-6 mx-6"
@@ -221,7 +221,7 @@ const Navbar = () => {
               <FaLinkedin size={32} />
             </motion.a>
             <motion.a
-              href="https://github.com/angelDova"
+              href="https://google.com"
               target={"_blank"}
               whileHover={{ y: -2 }}
               className="w-6 mx-6"
@@ -230,7 +230,7 @@ const Navbar = () => {
               <FaYoutube size={32} />
             </motion.a>
             <motion.a
-              href="https://github.com/angelDova"
+              href="https://google.com"
               target={"_blank"}
               whileHover={{ y: -2 }}
               className="w-6 ml-6"

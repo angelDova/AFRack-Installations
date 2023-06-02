@@ -31,7 +31,7 @@ const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({
   github,
 }) => {
   return (
-    <article className="w-full flex items-center justify-between rounded-3xl border border-solid border-dark bg-light shadow-2xl p-12 relative rounded-br-2xl dark:bg-dark dark:border-light lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4 sm:w-1/2">
+    <article className="w-full flex items-center justify-between rounded-3xl border border-solid border-dark bg-light shadow-2xl p-12 relative rounded-br-2xl dark:bg-dark/90 dark:border-light lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4 sm:w-1/2">
       <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-dark rounded-br-3xl dark:bg-light xs:-right-2 sm:h-[102%] xs:w-full xs:rounded-[1.5rem]" />
       <Link
         className="w-1/2 cursor-pointer overflow-hidden rounded-lg lg:w-full"
@@ -55,7 +55,7 @@ const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({
           target="_blank"
           className="hover:underline underline-offset-2"
         >
-          <h2 className="my-2 w-full text-left text-4xl font-bold dark:text-light sm:text-sm">
+          <h2 className="my-2 w-full text-left text-4xl font-bold dark:text-light sm:text-sm text-dark">
             {title}
           </h2>
         </Link>
@@ -64,7 +64,7 @@ const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({
         </p>
         <div className="mt-2 flex items-center ">
           <Link href={github} target="_blank" className="w-12">
-            <FaGithub size={46} />
+            <FaGithub size={46} className="text-dark dark:text-light" />
           </Link>
           <Link
             href={link}
@@ -123,7 +123,7 @@ const Project: React.FC<ProjectProps> = ({
           target="_blank"
           className="hover:underline underline-offset-2"
         >
-          <h2 className="my-2 w-full text-left text-3xl font-bold lg:text-2xl">
+          <h2 className="my-2 w-full text-left text-3xl font-bold lg:text-2xl text-dark dark:text-light">
             {title}
           </h2>
         </Link>
@@ -131,12 +131,12 @@ const Project: React.FC<ProjectProps> = ({
         <div className="w-full mt-2 flex items-center justify-between">
           <Link href={github} target="_blank" className="w-10 md:w-8">
             {/* possibly adjust styling to the link above depending on how it looks */}
-            <FaGithub size={46} />
+            <FaGithub size={46} className="text-dark dark:text-light" />
           </Link>
           <Link
             href={link}
             target="_blank"
-            className="text-lg font-semibold hover:underline underline-offset-2 md:text-base"
+            className="text-lg font-semibold hover:underline underline-offset-2 md:text-base text-dark dark:text-light"
           >
             Visit
           </Link>
