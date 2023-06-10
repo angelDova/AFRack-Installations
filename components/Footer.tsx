@@ -105,11 +105,13 @@
 
 import Layout from "@/components/Layout";
 import Link from "next/link";
+import Logo from "./Logo";
 
 const Footer = () => {
   return (
     <footer className="w-full border-t-2 border-solid border-dark font-medium text-lg cursor-default text-dark dark:text-light dark:border-light sm:text-base">
       <Layout className="py-8 flex items-center justify-between lg:flex-col lg:py-6 lg:text-center">
+        <Logo />
         <span>{new Date().getFullYear()} &copy; All Rights Reserved.</span>
         <div className="flex items-center lg:py-2">
           Built by&nbsp;

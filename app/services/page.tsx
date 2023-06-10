@@ -312,12 +312,6 @@ const services = () => {
               date="March 30, 2023"
               link="/"
             />
-            <Service
-              title="Form Validation In Reactjs: Build A Reusable Custom Hook For Inputs And Error Handling"
-              img={service3}
-              date="March 30, 2023"
-              link="/"
-            />
           </ul>
         </Layout>
       </main>

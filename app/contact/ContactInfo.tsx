@@ -49,7 +49,7 @@ const ContactInfo = () => {
         email="ac@afrackinstallations.com"
       />
       <PersonInfo
-        name="Angel"
+        name="Angel Cordova"
         title="Project Manager"
         cell="(562) 447-7629"
         email="Angelfcb01@yahoo.com"
